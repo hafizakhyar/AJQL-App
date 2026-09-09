@@ -1,0 +1,6 @@
+{
+  "name": "AJQL App",
+  "description": "Al-Jannah Quran Learning Center - Sistem Manajemen Pembelajaran Al-Qur'an Masjid",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

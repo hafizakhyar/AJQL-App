@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Soft Sage Drop Shadow for AJQL Typography -->
+    <filter id="sage-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="5" dy="6" stdDeviation="0.5" flood-color="#a4cca6" flood-opacity="0.95" />
+    </filter>
+
+    <!-- Clip Path for the Left Half of Mosque Dome -->
+    <clipPath id="left-half-clip">
+      <rect x="0" y="0" width="250" height="500" />
+    </clipPath>
+
+    <!-- Clip Path for the Right Half of Mosque Dome -->
+    <clipPath id="right-half-clip">
+      <rect x="250" y="0" width="250" height="500" />
+    </clipPath>
+  </defs>
+
+  <!-- 1. MOSQUE DOME (KUBAH MASJID) -->
+  <!-- Full Dome Outer Path -->
+  <!-- Left Side: Dark Forest Green (#136b35) -->
+  <g clip-path="url(#left-half-clip)">
+    <!-- Outer pointed arch dome -->
+    <path
+      d="M 250,16 C 242,50 205,82 172,122 C 148,152 144,195 166,236 C 182,264 212,282 250,290 L 250,16 Z"
+      fill="#116834"
+    />
+  </g>
+
+  <!-- Right Side: Leaf / Olive Green (#589f25) -->
+  <g clip-path="url(#right-half-clip)">
+    <!-- Outer pointed arch dome -->
+    <path
+      d="M 250,16 C 258,50 295,82 328,122 C 352,152 356,195 334,236 C 318,264 288,282 250,290 L 250,16 Z"
+      fill="#589f25"
+    />
+  </g>
+
+  <!-- Inner Dome Cutout (White arch opening) -->
+  <path
+    d="M 250,56 C 244,78 218,104 194,136 C 178,158 176,188 190,218 C 204,242 226,254 250,260 C 274,254 296,242 310,218 C 324,188 322,158 306,136 C 282,104 256,78 250,56 Z"
+    fill="#ffffff"
+  />
+
+  <!-- 2. CRESCENT MOON & STAR (BULAN SABIT & BINTANG) -->
+  <g transform="translate(250, 140)">
+    <!-- Golden Crescent Moon -->
+    <path
+      d="M -3, -26 C 14,-26 26,-14 26,3 C 26,19 14,31 -2,31 C -18,31 -31,18 -31,2 C -31,-11 -22,-22 -9,-25 C -5,-16 0,-8 11,-4 C 20,-1 22,7 18,16 C 12,23 3,24 -7,21 C -17,17 -22,8 -20,-1 C -18,-9 -10,-20 -3,-26 Z"
+      fill="#e89e24"
+    />
+    <!-- 5-Pointed Star -->
+    <!-- Centered inside the crescent's arms -->
+    <polygon
+      points="2,-4 5,4 13,4 7,9 9,17 2,12 -5,17 -3,9 -9,4 -1,4"
+      fill="#e89e24"
+    />
+  </g>
+
+  <!-- 3. OPEN QURAN (MUSHAF AL-QUR'AN TERBUKA) -->
+  <!-- Golden Fan Pages -->
+  <!-- Lower page shadow / base layer -->
+  <path
+    d="M 250,230 C 220,205 170,185 130,192 C 145,182 195,178 250,208 C 305,178 355,182 370,192 C 330,185 280,205 250,230 Z"
+    fill="#d98912"
+  />
+
+  <!-- Middle Page Layer -->
+  <path
+    d="M 250,224 C 218,196 168,174 134,178 C 152,168 202,166 250,196 C 298,166 348,168 366,178 C 332,174 282,196 250,224 Z"
+    fill="#f2af2b"
+  />
+
+  <!-- Upper Page Layer -->
+  <path
+    d="M 250,217 C 215,186 168,160 138,162 C 158,150 208,152 250,183 C 292,152 342,150 362,162 C 332,160 285,186 250,217 Z"
+    fill="#f8c347"
+  />
+
+  <!-- Spine / Center Page Crease Divider -->
+  <path
+    d="M 250,182 L 250,230"
+    stroke="#c47806"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+
+  <!-- 4. REHAL (BOOK STAND - ALAS BACA KAYU) -->
+  <!-- Left-to-right leg (underneath) -->
+  <path
+    d="M 188,212 L 236,244 L 210,268 L 160,234 Z"
+    fill="#0a5228"
+  />
+  <path
+    d="M 246,251 L 295,290 L 305,282 L 260,244 Z"
+    fill="#0a5228"
+  />
+
+  <!-- Crossed X Rehal Stand -->
+  <g id="rehal-front">
+    <!-- Top-Right to Bottom-Left Cross Plank -->
+    <path
+      d="M 312,212 L 340,234 L 194,295 L 182,284 Z"
+      fill="#0c5e2d"
+    />
+    <!-- Top-Left to Bottom-Right Cross Plank with depth -->
+    <path
+      d="M 188,212 L 160,234 L 306,295 L 318,284 Z"
+      fill="#0f6d36"
+    />
+    <!-- Center X intersection highlight -->
+    <path
+      d="M 235,242 L 265,242 L 270,258 L 230,258 Z"
+      fill="#13773c"
+      opacity="0.8"
+    />
+    <!-- Rehal bottom feet notches -->
+    <polygon points="182,284 194,295 190,298 178,287" fill="#08421f" />
+    <polygon points="318,284 306,295 310,298 322,287" fill="#08421f" />
+  </g>
+
+  <!-- 5. "AJQL" BOLD ROUNDED LOGOTYPE WITH SAGE SHADOW -->
+  <!-- We render shadow first, then solid text for universal vector sharpness -->
+  <g filter="url(#sage-shadow)">
+    <!-- Letter A -->
+    <path
+      d="M 102,398 L 76,398 L 102,318 C 104,312 110,308 118,308 L 126,308 C 134,308 140,312 142,318 L 168,398 L 142,398 L 136,378 L 108,378 L 102,398 Z M 113,360 L 131,360 L 122,330 Z"
+      fill="#0e6b38"
+    />
+
+    <!-- Letter J -->
+    <path
+      d="M 218,308 L 218,374 C 218,390 206,400 188,400 C 172,400 162,392 160,380 L 182,377 C 183,382 185,385 188,385 C 193,385 196,381 196,372 L 196,308 L 218,308 Z"
+      fill="#0e6b38"
+    />
+
+    <!-- Letter Q -->
+    <path
+      d="M 284,308 C 309,308 326,326 326,353 C 326,366 320,378 310,387 L 322,398 L 306,408 L 296,396 C 292,397 288,398 284,398 C 259,398 242,380 242,353 C 242,326 259,308 284,308 Z M 284,324 C 270,324 262,336 262,353 C 262,370 270,382 284,382 C 298,382 306,370 306,353 C 306,336 298,324 284,324 Z"
+      fill="#0e6b38"
+    />
+
+    <!-- Letter L -->
+    <path
+      d="M 350,308 L 372,308 L 372,382 L 412,382 L 412,398 L 350,398 L 350,308 Z"
+      fill="#0e6b38"
+    />
+  </g>
+
+  <!-- 6. SUBTITLE: "Al Jannah Quran Learning" -->
+  <text
+    x="250"
+    y="442"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Plus Jakarta Sans', sans-serif"
+    font-size="25"
+    font-weight="800"
+    letter-spacing="-0.3"
+    fill="#0e6b38"
+  >
+    Al Jannah Quran Learning
+  </text>
+</svg>
